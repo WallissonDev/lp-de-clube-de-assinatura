@@ -8,7 +8,7 @@
 }
 
 body{
-    padding-inline: 4rem;
+    background-color: var(--pink-low);
 }
 
 :root{
@@ -32,12 +32,12 @@ body{
     --text-body: #E2E7E9;
     --text-label: #BAC6C9;
 
-    --ff-base: "Raleway", sans-serif;
+    --ff-base: "Raleway", sans-serif;;
 
-    --title-lg: bold 6rem/auto var(--ff-base);
-    --title-md: bold 5rem/auto var(--ff-base);
-    --title-sm: bold 4rem/auto var(--ff-base);
-    --title-xs: bold 2rem/auto var(--ff-base);
+    --title-lg: bold 4rem/normal var(--ff-base);
+    --title-md: bold 5rem/normal var(--ff-base);
+    --title-sm: bold 4rem/normal var(--ff-base);
+    --title-xs: bold 2rem/normal var(--ff-base);
     --subtitle: normal 4rem/200% var(--ff-base);
 
     --body-lg: normal 1.5rem/140% var(--ff-base);
@@ -45,7 +45,26 @@ body{
     --body-sm: normal 1.75rem/140% var(--ff-base);
     --body-xs: normal 1.5rem/140% var(--ff-base);
 
-    --button: bold 1.5rem/auto var(--ff-base);
-    --link: normal 1.5rem/auto var(--ff-base);
-    --tag: bold 1.2rem/auto var(--ff-base);
-} 
+    --button: bold 1rem/normal var(--ff-base);
+    --link: normal 1.5rem/normal var(--ff-base);
+    --tag: bold 1.2rem/normal var(--ff-base);
+}
+
+
+h1{
+    font: var(--title-lg);
+    color: var(--text-title);
+}
+
+p{
+    font: var(--body-lg);
+    color: var(--text-body);
+}
+
+.button{
+    font: var(--button);
+}
+
+a{
+    text-decoration: none;
+}
