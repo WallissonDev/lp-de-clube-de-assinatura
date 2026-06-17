@@ -1,9 +1,9 @@
 .about{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 700px;
+    margin: 5rem 0rem 8rem 0rem;
 
     & div:nth-child(1){
         display: flex;
