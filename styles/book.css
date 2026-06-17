@@ -1,0 +1,98 @@
+.book{
+    
+    height: 1234px;
+    width: 700px;
+    margin: auto;
+    background-image: url(../assets/images/book.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+
+    &:hover{
+        & span:nth-child(1){
+            left: -6rem;
+        }
+
+        & span:nth-child(2){
+            left: -15rem;
+        }
+
+        & span:nth-child(3){
+            & img[src*="purple"]{
+                right: -25rem;
+            }
+
+             & img[src*="yellow"]{
+                right: -12rem;
+            }
+        }
+
+        & span:nth-child(4){
+            right: -32rem;
+        }
+    }
+
+    & span:nth-child(1){
+        position: absolute;
+        top: 15rem;
+        left: 15rem;
+        z-index: -2;
+        transition: left 1s ease;
+
+        & p{
+            position: absolute;
+            top: -2rem;
+            left: -8rem;
+        }
+
+    }
+
+    & span:nth-child(2){
+        position: absolute;
+        bottom: 40rem;
+        left: 6rem;
+        z-index: -1;
+        transition: left 1s ease;
+
+        & img{
+            transform: rotate(-10deg);
+            position: absolute;
+
+        }
+    }
+
+    & span:nth-child(3){
+        /* position: relative; */
+
+        & img[src*="yellow"]{   
+            position: absolute;
+            transition: right 1s ease;
+            transform: rotate(10deg);
+            top: 12rem;
+            right: 1rem;
+            z-index: -1;
+
+            width: 40%;
+        }
+
+        & img[src*="purple"]{
+            position: absolute;
+            transition: right 1s ease;
+            transform: rotate(20deg);
+            top: 12rem;
+            right: 0rem;
+            z-index: -2;
+            width: 40%;
+        }
+    }
+
+    & span:nth-child(4){
+        position: absolute;
+        transition: right 1s ease;
+        z-index: -1;
+        bottom: 15rem;
+        right: 10rem;    
+    }
+
+}
