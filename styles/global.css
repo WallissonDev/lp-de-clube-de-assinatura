@@ -8,11 +8,11 @@
 }
 
 body{
-    background-color: var(--pink-background);
+    background: linear-gradient(to bottom, var(--pink-background), var(--blue-low));
 }
 
 :root{
-    --pink-light: ##C59DD2;
+    --pink-light: #C59DD2;
     --pink-base: #9547A5;
     --pink-dark: #7D298A;
     --pink-low: #3F0F41;
@@ -36,7 +36,7 @@ body{
     --ff-base: "Raleway", sans-serif;;
 
     --title-lg: bold 4rem/normal var(--ff-base);
-    --title-md: bold 5rem/normal var(--ff-base);
+    --title-md: bold 3rem/normal var(--ff-base);
     --title-sm: bold 4rem/normal var(--ff-base);
     --title-xs: bold 2rem/normal var(--ff-base);
     --subtitle: normal 2.5rem/200% var(--ff-base);
@@ -44,7 +44,7 @@ body{
     --body-lg: normal 1.5rem/140% var(--ff-base);
     --body-md: normal 2rem/140% var(--ff-base);
     --body-sm: normal 1.75rem/140% var(--ff-base);
-    --body-xs: normal 1.5rem/140% var(--ff-base);
+    --body-xs: normal 1rem/140% var(--ff-base);
 
     --button: bold 1rem/normal var(--ff-base);
     --link: normal 1.5rem/normal var(--ff-base);

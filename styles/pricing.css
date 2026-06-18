@@ -1,0 +1,126 @@
+.pricing{
+    font: inherit;
+
+    display: grid;
+    grid-template-columns: repeat(3, 388px);
+    gap: 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+    grid-template-areas:
+    "title title title" 
+    "month semi year";
+
+
+    & h1{
+        grid-area: title;
+        place-self: center;
+    }
+    
+    & .month{
+        grid-area: month;
+        
+        & h3{
+            color: var(--blue-light);
+        }
+
+        & a.button{
+            background-color: var(--blue-dark);
+
+            &::before{
+                background-color: var(--blue-mid);
+            }
+        }
+    }
+
+    & .semiannual{
+        grid-area: semi;
+        color: var(--pink-light);
+        position: relative;
+
+        &::before{
+            content: "POPULAR";
+            display: inline-block;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            padding: 1rem;
+
+            background-color: var(--shape-stroke);
+            border-radius: 1.5rem;
+
+            font: bold 0.85rem/100% var(--ff-base);
+            color: white;
+
+        }
+    }
+
+    & .yearly{
+        grid-area: year;
+        color: var(--blue-light);
+        
+        & a.button{
+            background-color: var(--blue-dark);
+
+            &::before{
+                background-color: var(--blue-mid);
+        }
+    }
+
+    }
+
+    & .card{
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem;
+        border: 10px solid var(--shape-stroke);
+        border-radius: 2rem;
+        background-color: var(--shape-base);
+
+
+        & h3{
+            font: 800 1.5rem/100% var(--ff-base);
+            font-weight: bold;
+            
+
+            padding-bottom: 43px;
+        }
+
+        & price{
+            color: var(--text-title);
+            font: var(--title-md);
+
+            padding-bottom: 1rem;
+
+            & span{
+                font-size: 1.5rem;
+            }
+        }
+
+        & small{
+            font: var(--body-xs);
+            color: var(--text-label);
+
+            padding-bottom: 4rem;
+        }
+
+        & li{
+            font: var(--body-xs);
+            color: var(--text-body);
+            list-style-type: none;
+            padding-block: .5rem;
+
+
+            & img{
+                width: 24px;
+                height: 24px;
+                margin-right: 1rem;
+                vertical-align: middle;
+            }
+        }
+
+        & a.button{
+            width: 100%;
+            margin-top: auto;
+        }
+    }
