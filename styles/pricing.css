@@ -1,8 +1,9 @@
 .pricing{
+    margin-top: 194px;
     font: inherit;
 
     display: grid;
-    grid-template-columns: repeat(3, 388px);
+    grid-template-columns: repeat(3, 400px);
     gap: 2rem;
     grid-template-rows: repeat(2, 1fr);
     place-content: center;
@@ -14,9 +15,40 @@
     & h1{
         grid-area: title;
         place-self: center;
+        text-align: center;
     }
     
     & .month{
+        
+        position: relative;
+
+        &::before{
+            content: "";
+            display: inline-block;
+            background-image: url(../assets/icons/star.svg);
+            background-size: cover;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+
+            top: -2rem;
+            left: -3rem;
+        }
+
+        &::after{
+            content: "";
+            display: inline-block;
+            background-image: url(../assets/icons/star.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+
+            top: 1rem;
+            left: -4rem;
+        }
+
+
         grid-area: month;
         
         & h3{
@@ -52,6 +84,13 @@
             color: white;
 
         }
+
+        &::after{
+            content: url(../assets/images/Bunny.svg);
+            position: absolute;
+            top: -3rem;
+            z-index: -1;
+        }
     }
 
     & .yearly{
@@ -66,6 +105,33 @@
         }
     }
 
+    position: relative;
+
+        &::before{
+            content: "";
+            display: inline-block;
+            background-image: url(../assets/icons/star.svg);
+            background-size: cover;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+
+            bottom: -2rem;
+            right: -3rem;
+        }
+
+        &::after{
+            content: "";
+            display: inline-block;
+            background-image: url(../assets/icons/star.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            bottom: 1rem;
+            right: -4rem;
+        }
+
     }
 
     & .card{
@@ -73,7 +139,7 @@
         flex-direction: column;
 
         padding: 2rem;
-        border: 10px solid var(--shape-stroke);
+        border: 2px solid var(--shape-stroke);
         border-radius: 2rem;
         background-color: var(--shape-base);
 
@@ -124,3 +190,34 @@
             margin-top: auto;
         }
     }
+}
+/* Card hover section */
+
+.pricing{
+    & .card:hover{
+        background-color: var(--shape-hover);
+        filter:drop-shadow(1px 1px 32px var(--blue-mid));
+        transform: translateY(-15px);    
+
+        transition: transform 1s ease, background-color 1s ease, filter 1s ease;
+        
+    }
+    .month::before, .month::after{
+        transition: transform 1s ease;
+    }
+
+    .month:hover::before, .month:hover::after{
+        transform: rotate(180deg);
+    }
+
+    .yearly::before, .yearly::after{
+        transition: transform 1s ease;
+    }
+
+    .yearly:hover::before, .yearly:hover::after{
+        transform: rotate(180deg);
+    }
+
+
+}
+      
