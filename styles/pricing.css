@@ -1,5 +1,6 @@
 .pricing{
-    margin-top: 194px;
+    margin-top: 220px;
+    margin-bottom: 220px;
     font: inherit;
 
     display: grid;
@@ -137,6 +138,7 @@
     & .card{
         display: flex;
         flex-direction: column;
+        transition: transform 1s ease, background-color 1s ease, filter 1s ease;
 
         padding: 2rem;
         border: 2px solid var(--shape-stroke);
@@ -197,10 +199,7 @@
     & .card:hover{
         background-color: var(--shape-hover);
         filter:drop-shadow(1px 1px 32px var(--blue-mid));
-        transform: translateY(-15px);    
-
-        transition: transform 1s ease, background-color 1s ease, filter 1s ease;
-        
+        transform: translateY(-15px);
     }
     .month::before, .month::after{
         transition: transform 1s ease;
@@ -220,4 +219,41 @@
 
 
 }
-      
+
+/* Opening cards on center */
+
+
+.pricing{
+  view-timeline-name: --revealing-timeline;
+  view-timeline-axis: block;
+}
+
+.month{
+    animation: moveToLeft linear both;
+    animation-range: entry 30% exit 30%;
+    animation-timeline: --revealing-timeline;
+}
+
+.yearly{
+    animation: moveToRight linear both;
+    animation-range: entry 30% exit 30%;
+    animation-timeline: --revealing-timeline;
+}
+
+@keyframes moveToLeft{
+    from{
+        left: 430px;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@keyframes moveToRight{
+    from{
+        left: -430px;
+    }
+    to{
+        left: 0;
+    }
+}
