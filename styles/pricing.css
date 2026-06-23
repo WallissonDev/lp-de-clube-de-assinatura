@@ -242,7 +242,7 @@
 
 @keyframes moveToLeft{
     from{
-        left: 430px;
+        left: 450px;
     }
     to{
         left: 0;
@@ -251,7 +251,7 @@
 
 @keyframes moveToRight{
     from{
-        left: -430px;
+        left: -450px;
     }
     to{
         left: 0;
