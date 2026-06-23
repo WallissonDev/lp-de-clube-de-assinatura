@@ -257,3 +257,29 @@
         left: 0;
     }
 }
+
+@media (width <= 80rem){
+    .pricing{
+        & h1{
+            font-size: 2rem;
+        }
+
+        view-timeline-name: initial;
+        view-timeline-axis: initial;
+        margin: 1rem;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "title"
+        "month"
+        "semi" 
+        "year";
+
+        & .card{
+            & price{
+                font-size: 2rem;
+            }
+        }
+    }
+}

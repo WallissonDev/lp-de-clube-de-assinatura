@@ -79,3 +79,19 @@
         justify-content: space-between;
     }
 }
+
+@media (width <= 80rem){
+    .description{
+        margin-inline: 1rem;
+        & subtitle{
+            font-size: 1rem;
+        
+        }
+
+        &:hover {
+            & div img {
+                scale: 0.5;
+          }
+        }
+    }
+}

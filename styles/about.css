@@ -15,3 +15,28 @@
         }
     }
 }
+
+@media (width <= 80rem){
+    .about {
+        height: 400px;
+        margin: 5rem .5rem 1rem .5rem;
+        & div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        & img{
+            width: 1.5rem;
+        }
+        & h1{
+            font-size: 1.15rem;
+            
+        }
+
+        & p{
+            text-align: center;
+            font-size: 1.25rem;
+        }
+    }
+}
