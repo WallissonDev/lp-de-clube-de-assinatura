@@ -230,13 +230,13 @@
 
 .month{
     animation: moveToLeft linear both;
-    animation-range: entry 30% exit 30%;
+    animation-range: entry 30% exit 10%;
     animation-timeline: --revealing-timeline;
 }
 
 .yearly{
     animation: moveToRight linear both;
-    animation-range: entry 30% exit 30%;
+    animation-range: entry 30% exit 10%;
     animation-timeline: --revealing-timeline;
 }
 
